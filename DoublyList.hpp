@@ -5,7 +5,7 @@
 using namespace std;
 
 template <typename T>
-class DoublyList : public UnsortedList<T> {
+class DoublyList {
     protected:
         // represents an element in the doubly linked list
         struct Node {
@@ -79,4 +79,5 @@ class DoublyList : public UnsortedList<T> {
 
 #include "DoublyList.tpp"
 #endif
+
 

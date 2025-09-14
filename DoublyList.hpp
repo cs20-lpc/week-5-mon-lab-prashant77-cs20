@@ -1,11 +1,12 @@
 #ifndef DOUBLY_LIST_HPP
 #define DOUBLY_LIST_HPP
 
+#include "List.hpp"
 #include <iostream>
 using namespace std;
 
 template <typename T>
-class DoublyList {
+class DoublyList : public List<T> {
     protected:
         // represents an element in the doubly linked list
         struct Node {
@@ -23,9 +24,6 @@ class DoublyList {
     private:
         // copy the state of the argument list to `this`
         void copy(const DoublyList<T>&);
-
-        // return the node at the given position (argument)
-        Node* getNode(int) const;
 
     public:
         // default constructor
@@ -62,15 +60,12 @@ class DoublyList {
         // remove the element at the given position (argument)
         virtual void remove(int) override;
 
-        // remove the first element that contains the given value (argument)
-        virtual void removeValue(const T&) override;
-
         // replace the element at the given position (argument 1) with
         // the value given (argument 2)
         virtual void replace(int, const T&) override;
 
         // check if an element exists that contains the given value (argument)
-        virtual bool search(const T&) const override;
+        virtual bool search(const T&) const;
 
         // overloaded stream insertion operator to make printing easier
         template <typename U>
@@ -79,5 +74,3 @@ class DoublyList {
 
 #include "DoublyList.tpp"
 #endif
-
-

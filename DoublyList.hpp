@@ -1,7 +1,6 @@
 #ifndef DOUBLY_LIST_HPP
 #define DOUBLY_LIST_HPP
 
-#include "UnsortedList.hpp"
 #include <iostream>
 using namespace std;
 
@@ -80,3 +79,4 @@ class DoublyList : public UnsortedList<T> {
 
 #include "DoublyList.tpp"
 #endif
+
